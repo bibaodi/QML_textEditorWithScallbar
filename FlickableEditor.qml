@@ -21,7 +21,10 @@ Flickable {
         rightPadding: 6
         topPadding: 0
         bottomPadding: 0
-        background: null
+        background: Rectangle {
+            anchors.fill: parent
+            color: "green"
+        }
     }
 
     ScrollBar.vertical: ScrollBar {}
