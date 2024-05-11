@@ -22,17 +22,14 @@ Flickable {
         topPadding: 0
         bottomPadding: 0
         background: null
-
-        MouseArea {
-            acceptedButtons: Qt.RightButton
-            anchors.fill: parent
-            onClicked: contextMenu.open()
-        }
-
-        onLinkActivated: function (link) {
-            Qt.openUrlExternally(link)
-        }
     }
 
     ScrollBar.vertical: ScrollBar {}
+
+    Component.onCompleted: {
+        for (var i = 0; i < 200; i++) {
+            var msg = "line: " + i
+            textArea.append(msg)
+        }
+    }
 }
